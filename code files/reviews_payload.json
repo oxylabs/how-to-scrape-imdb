@@ -1,0 +1,97 @@
+{
+    "source": "universal",
+    "url": "https://www.imdb.com/title/tt0111161/reviews?ref_=tt_urv",
+    "parse": true,
+    "parsing_instructions": {
+        "movie_name": {
+            "_fns": [
+                {
+                    "_fn": "css_one",
+                    "_args": [
+                        ".parent a"
+                    ]
+                },
+                {
+                    "_fn": "element_text"
+                }
+            ]
+        },
+        "reviews": {
+            "_fns": [
+                {
+                    "_fn": "css",
+                    "_args": [
+                        ".imdb-user-review"
+                    ]
+                }
+            ],
+            "_items": {
+                "review_title": {
+                    "_fns": [
+                        {
+                            "_fn": "css_one",
+                            "_args": [
+                                ".title"
+                            ]
+                        },
+                        {
+                            "_fn": "element_text"
+                        }
+                    ]
+                },
+                "review-body": {
+                    "_fns": [
+                        {
+                            "_fn": "css_one",
+                            "_args": [
+                                ".content>.show-more__control"
+                            ]
+                        },
+                        {
+                            "_fn": "element_text"
+                        }
+                    ]
+                },
+                "rating": {
+                    "_fns": [
+                        {
+                            "_fn": "css_one",
+                            "_args": [
+                                ".rating-other-user-rating"
+                            ]
+                        },
+                        {
+                            "_fn": "element_text"
+                        }
+                    ]
+                },
+                "name": {
+                    "_fns": [
+                        {
+                            "_fn": "css_one",
+                            "_args": [
+                                ".display-name-link a"
+                            ]
+                        },
+                        {
+                            "_fn": "element_text"
+                        }
+                    ]
+                },
+                "review_date": {
+                    "_fns": [
+                        {
+                            "_fn": "css_one",
+                            "_args": [
+                                ".review-date"
+                            ]
+                        },
+                        {
+                            "_fn": "element_text"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
