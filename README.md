@@ -105,7 +105,7 @@ response = requests.post(
 print(response.json()['results'][0]['content'])
 ```
 
-Learn more about the Custom Parser feature [here](https://developers.oxylabs.io/scraper-apis/custom-parser).
+Learn more about the Custom Parser feature [here](https://developers.oxylabs.io/products/web-scraper-api/features/custom-parser).
 
 ## 3. Scraping movie info from a list
 Before scraping a page, we need to examine the page structure. See the steps on our [blog post](https://oxylabs.io/blog/how-to-scrape-imdb#3.-scraping-movie-info-from-a-list). We'll target this [IMDb top 250](https://www.imdb.com/chart/top/?ref_=nv_mv_250) listing page:
